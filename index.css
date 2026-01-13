@@ -1,9 +1,20 @@
 /*Base*/
 
+body {
+  background-color: #f5f5f5;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/*Color display*/
+
 #color-container {
   display: flex;
   height: 400px;
-  width: 100%;
 }
 
 .color-column {
@@ -14,11 +25,74 @@
 
 .color-swatch {
   flex-grow: 1;
+  transition: transform 0.1s ease;
+}
+
+.color-swatch:active {
+  filter: brightness(0.9);
 }
 
 .hex-value {
   text-align: center;
-  padding: 10px;
-  background: white;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 15px 0;
+  margin: 0;
   cursor: pointer;
+  text-transform: uppercase;
+}
+
+/*Window*/
+
+.app-window {
+  background: white;
+  width: 90%;
+  max-width: 550px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/*Controls*/
+
+.controls {
+  display: flex;
+  padding: 20px;
+  gap: 10px;
+  border-bottom: 1px solid #e5e5e5;
+  align-items: center;
+}
+
+/*Inputs*/
+
+input[type="color"] {
+  width: 60px;
+  height: 40px;
+  border: 1px solid #d1d5db;
+  padding: 2px;
+  background: none;
+  cursor: pointer;
+}
+
+select,
+button {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/*Buttons*/
+
+button {
+  background-color: white;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #f9fafb;
 }
