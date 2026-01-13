@@ -4,7 +4,7 @@
 
 A modern, responsive web application that generates professional color palettes using [The Color API](https://www.thecolorapi.com/). Designed with a sleek "tablet-style" interface and optimized for a clean user experience.
 
-![Project Preview](your-screenshot-link-here.png)
+![Color Scheme Generator Preview](images/app-preview.png)
 
 ## ✨ Features
 
