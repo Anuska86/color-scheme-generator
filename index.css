@@ -33,6 +33,11 @@ body {
   filter: brightness(0.9);
 }
 
+.color-column:hover .color-swatch {
+  filter: saturate(1.2);
+  cursor: pointer;
+}
+
 .hex-value {
   text-align: center;
   font-size: 12px;
@@ -41,6 +46,10 @@ body {
   margin: 0;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.hex-value:hover {
+  color: #3b82f6;
 }
 
 /*Window*/
@@ -53,6 +62,20 @@ body {
   overflow: hidden;
   box-shadow: 0px 30px 60px rgba(0, 0, 0, 0.12);
   border: 8px solid #1f2937;
+  position: relative;
+}
+
+.app-window::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #374151;
+  border-radius: 50%;
+  z-index: 10;
 }
 
 /*Controls*/

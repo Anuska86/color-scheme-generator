@@ -16,7 +16,7 @@ getBtn.addEventListener("click", () => {
     });
 });
 
-//render the colors
+//Render the colors
 
 function renderColors(colorsArray) {
   let html = "";
@@ -31,6 +31,24 @@ function renderColors(colorsArray) {
   });
   container.innerHTML = html;
 }
+
+// Fetch and render
+function getScheme() {
+  const seedHex = colorInput.value.substring(1);
+  const mode = schemeSelect.value;
+
+  fetch(
+    `https://www.thecolorapi.com/scheme?hex=${seedHex}&mode=${mode}&count=5`
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      renderColors(data.colors);
+    });
+}
+
+getBtn.addEventListener("click", getScheme);
+
+getScheme();
 
 /*Click to copy*/
 
