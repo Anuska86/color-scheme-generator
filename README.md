@@ -4,6 +4,8 @@
 
 A modern, responsive web application that generates professional color palettes using [The Color API](https://www.thecolorapi.com/). Designed with a sleek "tablet-style" interface and optimized for a clean user experience.
 
+**[🌐 View Live Demo](https://color-scheme-generator-rust.vercel.app/)**
+
 ![Color Scheme Generator Preview](images/app-preview.png)
 
 ## ✨ Features
@@ -25,7 +27,7 @@ A modern, responsive web application that generates professional color palettes 
 
 1. Clone this repository:
    ```bash
-   git clone (https://github.com/Anuska86/color-scheme-generator.git)
+   git clone https://github.com/Anuska86/color-scheme-generator.git
    ```
 2. Open index.html in your browser (or use VS Code Live Server).
 
