@@ -16,6 +16,8 @@ getBtn.addEventListener("click", () => {
     });
 });
 
+//render the colors
+
 function renderColors(colorsArray) {
   let html = "";
   colorsArray.forEach((color) => {
@@ -29,3 +31,13 @@ function renderColors(colorsArray) {
   });
   container.innerHTML = html;
 }
+
+/*Click to copy*/
+
+container.addEventListener("click", (e) => {
+  const hex = e.target.dataset.hex;
+  if (hex) {
+    navigator.clipboard.writeText(hex);
+    alert(`Copied ${hex} to clipboard!`);
+  }
+});
